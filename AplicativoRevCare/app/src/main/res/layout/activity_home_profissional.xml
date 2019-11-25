@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profissional.gui.HomeProfissional">
+
+    <Button
+        android:id="@+id/botaoAtualizarPerfilProfissional"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="52dp"
+        android:background="#AF0D25"
+        android:text="Atualizar Perfil"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/barra_superior2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#AF0D25"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/imagemProfissional"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/ic_camera_alt_black_24dp"
+        android:src="@drawable/ic_action_name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/nomeprofissional"
+        app:layout_constraintStart_toEndOf="@+id/image4" />
+
+    <TextView
+        android:id="@+id/nomeprofissional"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="223dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="223dp"
+        android:layout_toEndOf="@+id/image"
+        android:text="@string/nome_do_profissional"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonSairProfissional" />
+
+    <EditText
+        android:id="@+id/decricaoprofissional"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:background="#80CACACA"
+        android:hint="Descrição do profissional"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/telefoneProfissionalHome"
+        app:layout_constraintStart_toEndOf="@+id/telefoneProfissionalHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/telefoneProfissionalHome"
+        app:layout_constraintEnd_toEndOf="@+id/lblCPF"
+        app:layout_constraintStart_toEndOf="@+id/lblCPF" />
+
+    <TextView
+        android:id="@+id/lblCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:text="CPF:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cpfProfissionalHome"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="Email:"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/emailProfissionalHome"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/emailProfissionalHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="9dp"
+        android:text="email@email.com"
+        android:textColor="#DD000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/cpfProfissionalHome"
+        app:layout_constraintTop_toBottomOf="@+id/cpfProfissionalHome" />
+
+    <TextView
+        android:id="@+id/cpfProfissionalHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="53dp"
+        android:text="000.000.000-00"
+        android:textColor="#DD000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/lblCPF"
+        app:layout_constraintTop_toBottomOf="@+id/decricaoprofissional" />
+
+    <TextView
+        android:id="@+id/telefoneProfissionalHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="13dp"
+        android:text="(00) 90000-0000"
+        android:textColor="#DD000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cpfProfissionalHome"
+        app:layout_constraintStart_toEndOf="@+id/lblTelefone" />
+
+    <Button
+        android:id="@+id/buttonSairProfissional"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="31dp"
+        android:background="#00FFFFFF"
+        android:text="Sair"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_superior2"
+        app:layout_constraintEnd_toStartOf="@+id/image4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/ic_action_name"
+        app:layout_constraintBottom_toBottomOf="@+id/nomeprofissional"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonSairProfissional"
+        app:layout_constraintTop_toTopOf="@+id/buttonSairProfissional" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
